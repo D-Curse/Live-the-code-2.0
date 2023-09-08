@@ -4,16 +4,16 @@
 }
 @font-face {
     font-family: monument-regular ;
-    src: url(/CareerGuidance/static/font/MonumentExtended-Regular.woff2);
+    src: url(../font/MonumentExtended-Regular.woff2);
 }
 
 @font-face {
     font-family: paloseco-light;
-    src: url(/CareerGuidance/static/font/Paloseco-Light.woff);
+    src: url(../font/Paloseco-Light.woff);
 }
 @font-face {
     font-family: paloseco-medium;
-    src: url(/CareerGuidance/static/font/Paloseco-Medium.woff);
+    src: url(../font/Paloseco-Medium.woff);
 }
 .container1-1{
    /* global 94%+ browsers support */

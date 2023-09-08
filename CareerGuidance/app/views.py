@@ -13,6 +13,9 @@ from django.core.exceptions import ValidationError
 def home(request):
     return render(request, 'home.html')
 
+def courseDetails(request):
+    return render(request, 'details.html')
+
 def dataAdmin(request):
     if 'submit-course-info' in request.POST:
         if 'field_name' in request.POST and 'course' in request.POST:
