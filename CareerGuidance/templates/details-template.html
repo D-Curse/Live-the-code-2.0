@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details-template</title>
+</head>
+<body>
+    <form method="post" action="{% url 'addInfo' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="main-head">
+            <input type="text" name="main_head" placeholder="MAIN HEADING" required><br><br>
+            <input type="file" name="image" required><br><br>
+        </div>
+        <br><br>
+
+        <div class="career">
+            <input type="text" name="career_head" placeholder="CAREER HEAD" required><br><br>
+            <input type="text" name="career_para" placeholder="CAREER PARA" required><br><br>
+        </div>
+        <br><br>
+
+        <input type="submit" name="submit-course-info" value="Add to Database">
+    </form>
+
+    <form method="post" action="{% url 'addInfo' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>EDU SECTION</h1>
+        <div class="edu">
+            <input type="text" name="main_head" placeholder="MAIN HEADING" required><br><br>
+            <input type="text" name="edu_stream" placeholder="EDU STREAM" required><br><br>
+            <input type="text" name="edu_gradution" placeholder="EDU GRADUTION" required><br><br>
+            <input type="text" name="edu_after_grad" placeholder="EDU AFTER GRAD" required><br><br>
+            <input type="text" name="edu_post_grad" placeholder="EDU POST GRAD" required><br><br>
+            <br><br>
+        </div>
+        <button type="button" id="add-edu">Add More Edu</button>
+        <input type="submit" name="submit-edu-info" value="Add to Database">
+    </form>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addEduButton = document.getElementById('add-edu');
+        const eduContainer = document.querySelector('.edu');
+
+        addEduButton.addEventListener('click', function() {
+            const clonedEduSection = eduContainer.cloneNode(true);
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.addEventListener('click', function() {
+                clonedEduSection.remove();
+            });
+            clonedEduSection.appendChild(deleteButton);
+            eduContainer.parentNode.insertBefore(clonedEduSection, addEduButton);
+        });
+    });
+</script>
+</html>
