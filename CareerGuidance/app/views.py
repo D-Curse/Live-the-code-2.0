@@ -12,8 +12,8 @@ from django.core.exceptions import ValidationError
 def home(request):
     return render(request, 'home.html')
 
-def addData(request):
-    return render(request, 'addData.html')
+def dataAdmin(request):
+    return render(request, 'data-admin.html')
 
 def signup(request):
     if 'submit_signup' in request.POST:
@@ -59,7 +59,4 @@ def signup(request):
                 return redirect('home')
             else:
                 return render(request, "signup.html", {'error_invalid':True})
-            
-        
-    
     return render(request, 'signup.html')
