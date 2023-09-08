@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from app.models import Course
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth import login
 from django.contrib.auth.password_validation import validate_password
@@ -13,6 +14,15 @@ def home(request):
     return render(request, 'home.html')
 
 def dataAdmin(request):
+    if 'submit-course-info' in request.POST:
+        if 'field_name' in request.POST and 'course' in request.POST:
+            field_name = request.POST['field_name']
+            branch = request.POST['course']
+
+            info = Course(field_name=field_name, branch=branch)
+            info.save()
+
+        return redirect('add')
     return render(request, 'data-admin.html')
 
 def signup(request):
