@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Section</title>
+</head>
+<body>
+    <h1>Create Data</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" required><br><br>
+        <input type="text" name="title" placeholder="Title" required><br><br>
+        <input type="text" name="price" placeholder="Product Price" required><br><br>
+        <textarea name="product_detail" placeholder="Product Detail" required></textarea><br><br>
+        <select name="category">
+            <option value="others">Others</option>
+            <option value="trending">Trending</option>
+            <option value="new_arrival">New Arrival</option>
+            <option value="special_arrival">Special Arrival</option>
+        </select><br><br>
+        <input type="submit" value="Cree">
+    </form>
+</body>
+</html>
