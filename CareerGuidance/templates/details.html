@@ -34,7 +34,7 @@
                 <img class="img1" src="../static/img/420x260.png" alt="">
             </div>
             <div class="heading">
-                Computer Science <br>  IT
+                {{ main_context.main_head }}
             </div>
         </div>
     
@@ -42,10 +42,10 @@
             <div class="info">
                 <div class="about-carrer">
                     <p class="head">About This Carrer</p>
-                    <p class="para1">Information about the field/domain -Computer Science   focuses on software and algorithm development, while IT focuses on implementing and managing technology systems. Both offer diverse career opportunities in the technology field.</p>
+                    <p class="para1">{{ main_context.about_career_par }}</p>
                 </div>
                 <div class="edu-path">
-                    <p class="head">How to Pursue a Career in Computer Application and IT</p>
+                    <p class="head">How to Pursue a {{ main_context.main_head }} </p>
                     <table class="styled-table">
                         <thead>
                             <tr>
@@ -58,18 +58,11 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Path 1</td>
-                                <td>Clear Class XII with Science Stream with Maths</td>
-                                <td>Pursue B.Tech in Computer Science Engineering / Software Engineering / IT Engineering for 4 years</td>
-                                <td>Pursue M.Tech for 2-3 years</td>
-                                <td>Pursue Ph.D for 2-3 years</td>
-                            </tr>
-                            <tr>
-                                <td>Path 2</td>
-                                <td>Clear Class XII with Science Stream with Maths</td>
-                                <td>Pursue B.Tech + M.Tech (Dual Degree) for 5 year</td>
-                                <td> - </td>
-                                <td>Pursue Ph.D for 2-3 years</td>
+                                <td>Path x</td>
+                                <td>{{ edu_stream }}</td>
+                                <td>{{ edu_gradution }}</td>
+                                <td>{{ edu_after_grad }}</td>
+                                <td>{{ edu_post_grad }}</td>
                             </tr>
                             
                         </tbody>
