@@ -10,4 +10,5 @@ urlpatterns = [
     path('careerLibrary/', views.library, name='careerLibrary'),
     path('logout/',views.logout_view, name='logout_view'),
     path('stream/<id>', views.stream, name='stream'),
+    path('search_gallery/', views.search_gallery, name='search_gallery'),
 ]

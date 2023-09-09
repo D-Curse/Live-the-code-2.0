@@ -6,6 +6,7 @@ from django.contrib.auth import login
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -168,3 +169,10 @@ def signup(request):
 def logout_view(request):
     logout(request)
     return render(request, "signup.html")
+
+def search_gallery(request):
+    query = request.GET.get('query', '')
+    results = Gallery.objects.filter(title__icontains=query)
+    search_results = [{'title': result.title} for result in results]
+
+    return JsonResponse({'results': search_results})
