@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Home Page</title>
 </head>
 <body>
@@ -45,8 +46,9 @@
                     <p class="info">Look into the multiple career options</p>
                 </div>
                 <div class="search-box">
-                    <input class="search-input" type="text" placeholder="Search something..">
+                    <input type="text" id="search-input" placeholder="Search by title">
                     <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div id="search-results"></div>
                 </div>
             </div>
         </div>
@@ -107,4 +109,34 @@
     </div>
     
 </body>
+<script>
+    $(document).ready(function() {
+        $('#search-input').on('input', function() {
+            var query = $(this).val().trim();
+
+            if (query.length >= 1) {
+                $.ajax({
+                    url: '/search_gallery/',
+                    data: { query: query },
+                    dataType: 'json',
+                    success: function(data) {
+                        var resultsContainer = $('#search-results');
+                        resultsContainer.empty();
+
+                        if (data.results.length > 0) {
+                            data.results.forEach(function(result) {
+                                var resultItem = $('<div><a href="/course_details/' + result.id + '/">' + result.title + '</a></div>');
+                                resultsContainer.append(resultItem);
+                            });
+                        } else {
+                            resultsContainer.html('<div>No results found.</div>');
+                        }
+                    }
+                });
+            } else {
+                $('#search-results').empty();
+            }
+        });
+    });
+</script>
 </html>
