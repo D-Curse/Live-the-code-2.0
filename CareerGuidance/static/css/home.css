@@ -1,0 +1,200 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: monument-regular ;
+    src: url(../font/MonumentExtended-Regular.woff2);
+}
+
+@font-face {
+    font-family: paloseco-light;
+    src: url(../font/Paloseco-Light.woff);
+}
+@font-face {
+    font-family: paloseco-medium;
+    src: url(../font/Paloseco-Medium.woff);
+}
+.container1-1{
+   /* global 94%+ browsers support */
+   border-radius: 0px 0px 800px 800px/ 100px;
+   background: radial-gradient(ellipse at 0% 0%, rgba(255, 255, 255, 1) 0%, rgba(196, 242, 238, 1) 100%);
+   height: 150vh;
+}
+/*   navbar start  */
+.list1-1{
+    list-style-type: none;
+}
+.navbar{
+    font-family: paloseco-medium;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.left-header{
+    position: relative;
+    left: 80px;
+    font-size: 25px;
+}
+.center-menu{
+    position: relative;
+    left: 300px;
+}
+.login-details{
+    position: relative;
+    left: 550px;
+}
+.lgin{
+    padding: 20px 25px;
+    color: white;
+    background-color:#387975 ;
+    border-radius: 15px;
+    margin: 20px;
+}
+.list1-1-1{
+    display: flex;
+    gap: 50px;
+}
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+/* search */
+
+.search-box {
+    width: 550px;
+    position: relative;
+    display: flex;
+  }
+  .search-input {
+    width: 100%;
+    font-family:paloseco-medium;
+    opacity: .7; 
+    font-size: 20px;
+    padding: 30px 45px 30px 25px;
+    background-color: transparent;
+    color: #6c6c6c;
+    border-radius: 10px;
+    border:1px solid #387975;
+    transition: all .4s;
+  }
+  .search-input:focus {
+    border:none;
+    outline:none;
+    box-shadow: 0 1px 12px #b8c6db;
+    -moz-box-shadow: 0 1px 12px #b8c6db;
+    -webkit-box-shadow: 0 1px 12px #b8c6db;
+  }
+  .search-btn {
+    background-color: transparent;
+    font-size: 18px;
+    padding: 6px 9px;
+    margin-left:-45px;
+    border:none;
+    color: #6c6c6c;
+    transition: all .4s;
+    z-index: 10;
+  }
+  .search-btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: black;
+  }
+  .search-btn:focus {
+    outline:none;
+    color:black;
+  }
+.search{
+    display: flex;
+    align-items: center;
+}
+.search-img{
+    position: relative;
+    left: 80px;
+    
+}
+.search-details{
+    position: relative;
+    left: 200px;
+    top: -50px;
+}
+.head{
+    font-family: monument-regular;
+    font-size: 50px;
+    width: 100%;
+    max-width: 90%;
+    margin-block: 40px;
+}
+.search-details{
+    max-width: 50%;
+}
+.info{
+    font-family: paloseco-medium;
+    opacity: .7;
+    font-size: 24px;
+    margin-block: 50px;
+}
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+}
+.courses{
+    position: relative;
+    top: -380px;
+    padding-top: 20px;
+    background: linear-gradient(180deg, rgba(62, 128, 124, 1) 18%, rgba(87, 142, 138, 1) 44%, rgba(146, 195, 191, 1) 100%);
+    border-radius: 2000px 2000px 0px 0px/ 400px ;
+    height: 160vh;
+}
+.head1{
+    margin-block: 60px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: monument-regular;
+}
+.head2{
+    margin-block: 200px 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: monument-regular;
+}
+.grid1-1{
+    margin-top: 40px;
+    background-color: #c9e6e6;
+    font-size: 40px;
+    padding: 80px 90px;
+    border-radius: 40px;
+    font-family:paloseco-medium;
+}
+.grid2{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 80px 120px;
+    column-gap: 80px;
+    font-family: paloseco-light;
+    row-gap: 40px;
+    font-size: 16px;
+    justify-content:center;
+    text-align: center;
+}
+
+/* footer */
+.footer{
+    height: 50vh;
+    background: linear-gradient(180deg, rgba(146, 195, 191, 1) 35%, rgba(196, 242, 238, 1) 72%);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    font-family: monument-regular ;
+}

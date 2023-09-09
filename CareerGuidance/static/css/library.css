@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: monument-regular ;
+    src: url(../font/MonumentExtended-Regular.woff2);
+}
+
+@font-face {
+    font-family: paloseco-light;
+    src: url(../font/Paloseco-Light.woff);
+}
+@font-face {
+    font-family: paloseco-medium;
+    src: url(../font/Paloseco-Medium.woff);
+}
+.container-1{
+   /* global 94%+ browsers support */
+   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(208, 243, 240, 1) 100%);
+
+}
+/*   navbar start  */
+.list1-1{
+    list-style-type: none;
+}
+
+.navbar{
+    font-family: paloseco-medium;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.left-header{
+    position: relative;
+    left: 80px;
+    font-size: 25px;
+}
+
+.center-menu{
+    position: relative;
+    left: 300px;
+}
+.login-details{
+    position: relative;
+    left: 550px;
+}
+.lgin{
+    padding: 20px 25px;
+    color: white;
+    background-color:#387975 ;
+    border-radius: 15px;
+    margin: 20px;
+}
+.list1-1-1{
+    display: flex;
+    gap: 50px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+/* navbar end */
+
+.library-heading{
+    margin-block: 80px 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 60px ;
+    font-family:monument-regular ;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: paloseco-medium;
+    row-gap: 80px;
+}
+.para{
+    margin-top: 15px;
+    opacity: .7;
+}
+.pics{
+    border-radius: 20px;
+}
+.career-option{
+    padding-bottom: 50px;
+    border-radius: 800px 800px 0px 0px/ 100px;
+    padding-top: 70px;
+    background: linear-gradient(180deg, rgba(196, 242, 238, 1) 0%, rgba(230, 255, 253, 1) 100%);
+}

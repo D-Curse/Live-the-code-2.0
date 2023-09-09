@@ -1,0 +1,141 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: monument-regular ;
+    src: url(../font/MonumentExtended-Regular.woff2);
+}
+
+@font-face {
+    font-family: paloseco-light;
+    src: url(../font/Paloseco-Light.woff);
+}
+@font-face {
+    font-family: paloseco-medium;
+    src: url(../font/Paloseco-Medium.woff);
+}
+.container1-1{
+   /* global 94%+ browsers support */
+   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(208, 243, 240, 1) 100%);
+
+}
+/*   navbar start  */
+.list1-1{
+    list-style-type: none;
+}
+
+.navbar{
+    font-family: paloseco-medium;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.left-header{
+    position: relative;
+    left: 80px;
+    font-size: 25px;
+}
+
+.center-menu{
+    position: relative;
+    left: 300px;
+}
+.login-details{
+    position: relative;
+    left: 550px;
+}
+.lgin{
+    padding: 20px 25px;
+    color: white;
+    background-color:#387975 ;
+    border-radius: 15px;
+    margin: 20px;
+}
+.list1-1-1{
+    display: flex;
+    gap: 50px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+/*      navbar end     */
+
+
+/* info */
+.carrer-heading{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    padding-inline:90px ;
+    justify-content: space-between;
+}
+.heading{
+    font-family: monument-regular ;
+    font-size: 55px;
+}
+.img1{
+    border-radius: 20px;
+}
+.detials-contaier{
+    border-radius: 800px 800px 0px 0px/ 100px;
+    margin-top:60px ;
+    padding-top: 40px;
+    background: radial-gradient(ellipse at 100% 100%, rgba(255, 255, 255, 1) 0%, rgba(196, 242, 238, 1) 100%);
+}
+.info{
+    padding: 30px 80px;
+}
+.head{
+    font-family: monument-regular ;
+    font-size: 25px;
+    margin-block:60px 20px ;
+}
+.para1{
+    font-family: paloseco-light;
+    width: 100%;
+    max-width: 60%;
+    font-size:16px ;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.list2, .list3{
+    display: flex;
+    font-family: paloseco-medium;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.list2-2, .list3-2{
+    font-family: paloseco-light;
+    font-size: 16px;
+}
+
+/*   info end    */
+
+

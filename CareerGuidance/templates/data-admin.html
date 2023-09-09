@@ -21,5 +21,20 @@
         </select><br><br>
         <input type="submit" value="Create">
    </form>
+
+
+    <h1>Course info</h1>
+    <form method="post" action="{% url 'add' %}">
+        {% csrf_token %}
+        <input type="text" name="field_name" required><br><br>
+        <select name="course" required>
+            <option value="arts">Arts</option>
+            <option value="science">Science</option>
+            <option value="commerce">Commerce</option>
+        </select><br><br>  
+        <input type="submit" name="submit-course-info" value="Add to Database">
+    </form>
+
+
 </body>
 </html>
