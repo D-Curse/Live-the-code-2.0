@@ -95,3 +95,47 @@ button{
     padding-top: 70px;
     background: linear-gradient(180deg, rgba(196, 242, 238, 1) 0%, rgba(230, 255, 253, 1) 100%);
 }
+/* footer */
+.footer{
+    display: flex;
+    border-top:2px solid rgb(126, 171, 147);
+    border-radius: 2000px 2000px 0px 0px/ 400px ;
+    background: linear-gradient(180deg, rgba(146, 195, 191, 1) 41%, rgba(191, 228, 225, 1) 100%);
+    color: whitesmoke;
+    font-family:paloseco-medium;
+    justify-content: space-around;
+    line-height: 40px;
+    font-size: 18px;
+    padding-block: 100px 60px;
+}
+li{
+    list-style-type: none;
+}
+.no{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.list4-1{
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 20px;
+}
+a {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  a:focus {
+    text-decoration: none;
+    color: black;
+  }
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
