@@ -45,6 +45,7 @@
 
         <div class="career-option">
             {% for gallery  in gallery %}
+<<<<<<< HEAD
                 <div class="grid">
                     <div class="grid1">
                         <a href="{% url 'addInfo' %}">
@@ -52,6 +53,18 @@
                         </a>
                         <p class="para"> {{ gallery.title }} </p>
                     </div>
+=======
+            <div class="grid">
+                <div class="grid1">
+                    <a href="{% url 'addInfo' %}">
+                        <img class="pics" src="{{ gallery.image.url }}">
+                    </a>
+                    <p class="para"> 
+                        <a href="{% url 'error' %}">
+                            {{ gallery.title }} 
+                        </a>
+                    </p>
+>>>>>>> 93f8154553d54ff9d210ee4281323afbf572df18
                 </div>
             {% endfor %}
         </div>
