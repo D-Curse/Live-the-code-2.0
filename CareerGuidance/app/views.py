@@ -176,3 +176,6 @@ def search_gallery(request):
     search_results = [{'title': result.title} for result in results]
 
     return JsonResponse({'results': search_results})
+
+def error(request):
+    return render(request, "error-page.html")
