@@ -11,7 +11,7 @@
         <div class="navbar">
             <div class="left-header">  
                     <a href="{% url 'home' %}">          
-                        <p>Carrer Guidence</p>
+                        <p>Career Guidence</p>
                     </a>
             </div>
             <div class="center-menu">
@@ -20,7 +20,7 @@
                         <li class="list1-1">About Us</li>
                         <li class="list1-1">Demos</li>
                         <li class="list1-1"> 
-                            <a href="{% url 'careerLibrary' %}"> Carrer Library </a> 
+                            <a href="{% url 'careerLibrary' %}"> Career Library </a> 
                         </li>
                     </ul>
                 </div>
@@ -45,6 +45,15 @@
 
         <div class="career-option">
             {% for gallery  in gallery %}
+<<<<<<< HEAD
+                <div class="grid">
+                    <div class="grid1">
+                        <a href="{% url 'addInfo' %}">
+                            <img class="pics" src="{{ gallery.image.url }}">
+                        </a>
+                        <p class="para"> {{ gallery.title }} </p>
+                    </div>
+=======
             <div class="grid">
                 <div class="grid1">
                     <a href="{% url 'addInfo' %}">
@@ -55,12 +64,55 @@
                             {{ gallery.title }} 
                         </a>
                     </p>
+>>>>>>> 93f8154553d54ff9d210ee4281323afbf572df18
                 </div>
-            </div>
             {% endfor %}
         </div>
         <div class="footer">
             <p>FOOTER THINKING</p>
+        </div>
+        <div class="footer">
+            <div class="contact">
+                <p>Contact number</p>
+                <p class="no">9136668654</p>
+                <p>Email</p>
+            </div>
+    
+            <div class="menu">
+                <ul class="list1">
+                    <li>About Us</li>
+                    <li>Demo</li>
+                    <li>Career Library</li>
+                </ul>
+            </div>
+    
+            <div class="policy">
+                <ul class="list2">
+                    <li>Contact Us</li>
+                    <li>Terms And Conditions</li>
+                    <li>Privacy Policy</li>
+                    <li>Disclaimer</li>
+                </ul>
+            </div>
+            <div class="career-options">
+                <ul class="list3">
+                    <li>Science</li>
+                    <li>Commerce</li>
+                    <li>Arts</li>
+                </ul>
+            </div>
+    
+            <div class="social">
+                <p>Our Social Media Handles</p>
+                <ul class="list4">
+                    <li class="list4-1"><img src="../static/img/instagram.svg" width="20px" height="20px" alt=""> 
+                    <p>Instagram</p></li>
+                    <li class="list4-1"><img src="../static/img/linkedin-in.svg" width="20px" height="20px" alt="">
+                    <p>LinkedIn</p></li>
+                    <li class="list4-1"><img src="../static/img/x-twitter.svg" width="20px" height="20px" alt="">
+                    <p>X-Twitter</p></li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
