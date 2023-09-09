@@ -82,8 +82,8 @@ button{
     border-radius: 20px;
 }
 .detials-contaier{
-    border-radius:  800px 800px 0px 0px/ 0px;
-    margin-top:100px ;
+    border-radius: 800px 800px 0px 0px/ 100px;
+    margin-top:60px ;
     padding-top: 40px;
     background: radial-gradient(ellipse at 100% 100%, rgba(255, 255, 255, 1) 0%, rgba(196, 242, 238, 1) 100%);
 }
