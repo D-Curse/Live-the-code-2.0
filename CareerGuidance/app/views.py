@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from app.models import Course, Details, EduDetails
+from app.models import Course, Details, EduDetails, Gallery
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth import login
 from django.contrib.auth.password_validation import validate_password
@@ -11,7 +11,33 @@ from django.core.exceptions import ValidationError
 
 @login_required(login_url='signup/')
 def home(request):
-    return render(request, 'home.html')
+    context = request.session.get('login_context', {})
+    return render(request, 'home.html', context)
+
+def library(request):
+    context = request.session.get('login_context', {})
+    gallery = Gallery.objects.all()
+    return render(request, 'library.html', {'context':context, 'gallery':gallery})
+
+def stream(request, id):
+    stream = ""
+
+    if id == '1':
+        stream = "Science"
+    elif id == '2':
+        stream = 'Commerce'
+    elif id == '3':
+        stream = 'Arts'
+
+    gallery_objects = Gallery.objects.filter(branch=stream)
+    
+    context = {
+        'stream': stream,
+        'gallery_object': gallery_objects,
+    }
+
+    return render(request, 'stream.html', context)
+
 
 def courseDetails(request):
     main_context = Details.objects.get(pk=1)
@@ -60,6 +86,16 @@ def dataAdminInfo(request):
             detailsEdu.save()
             
             request.session['edu_context'] = detailsEdu
+            
+            return redirect('addInfo')
+        
+    if 'submit-gallery-data' in request.POST:
+        if request.method == 'POST':
+            title = request.POST['title']
+            image = request.FILES['image']
+
+            data = Gallery(title=title, image=image)
+            data.save()
             
             return redirect('addInfo')
     return render(request, 'details-template.html')
@@ -115,11 +151,20 @@ def signup(request):
             
             user = authenticate(username=username, password=password)
             
+            context = {
+                'user' : username,
+            }
+            
+            request.session['login_context'] = context
+            
             print('before if')
             if user is not None:
-                print(user)
                 login(request, user)
                 return redirect('home')
             else:
                 return render(request, "signup.html", {'error_invalid':True})
     return render(request, 'signup.html')
+
+def logout_view(request):
+    logout(request)
+    return render(request, "signup.html")

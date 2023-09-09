@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/science.css">
+    <title>Science</title>
+</head>
+<body>
+    <div class="container3-1">
+        <div class="navbar">
+            <div class="left-header">  
+                    <a href="{% url 'home' %}">          
+                        <p>Carrer Guidence</p>
+                    </a>
+            </div>
+            <div class="center-menu">
+                <div class="list-1">
+                    <ul class="list1-1-1">
+                        <li class="list1-1">About Us</li>
+                        <li class="list1-1">Demos</li>
+                        <li class="list1-1"> 
+                            <a href="{% url 'careerLibrary' %}"> Carrer Library </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="login-details">
+                <button> {{ user }} </button>
+                <button class="lgin">
+                    <a href="{% url 'logout_view' %}">
+                        Log Out
+                    </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="science">
+            <div class="head">
+                {{stream}}
+            </div>
+        </div>
+        <div class="sci-career-option">
+            <div class="grid">
+                {% for gallery_obj in gallery_object %}
+                <div class="grid1">
+                    <img src="{{ gallery_obj.image.url }}" alt="{{ gallery_obj.title }}" class="pics">
+                    <p class="para">{{ gallery_obj.title }}</p>
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

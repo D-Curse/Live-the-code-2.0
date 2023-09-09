@@ -43,3 +43,16 @@ class EduDetails(models.Model):
     def __str__(self):
         return self.main_head
     
+class Gallery(models.Model):
+    BRANCH_CHOICES = (
+        ('Science', 'science'),
+        ('Commerce', 'commerce'),
+        ('Arts', 'arts'),
+    )
+    
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='static/media')
+    branch = models.CharField(max_length=100, choices=BRANCH_CHOICES, default='science')
+    
+    def __str__(self):
+        return f"{self.title} - {self.branch}"
