@@ -50,7 +50,11 @@
                     <a href="{% url 'addInfo' %}">
                         <img class="pics" src="{{ gallery.image.url }}">
                     </a>
-                    <p class="para"> {{ gallery.title }} </p>
+                    <p class="para"> 
+                        <a href="{% url 'error' %}">
+                            {{ gallery.title }} 
+                        </a>
+                    </p>
                 </div>
             </div>
             {% endfor %}
